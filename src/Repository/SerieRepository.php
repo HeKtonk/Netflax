@@ -65,7 +65,7 @@ class SerieRepository extends ServiceEntityRepository
                 date_created as dateCreated, 
                 date_modified as dateModified 
                 FROM Serie AS s 
-                WHERE s.firstAirDate > :seuil 
+                WHERE s.first_air_date > :seuil 
                 ORDER BY s.popularity DESC";
 
         $connection = $this->getEntityManager()->getConnection();
